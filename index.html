@@ -5,31 +5,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- BOTÃO WHATSAPP FIXO -->
-<a
-  href="https://wa.me/5521979229365"
-  target="_blank"
-  onclick="fbq('track', 'Contact');"
-  style="
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #25D366;
-    color: white;
-    padding: 14px 18px;
-    border-radius: 50px;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: none;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    z-index: 9999;
-  "
->
-  💬 Falar no WhatsApp
-</a>
-
-    
     <!-- Meta Pixel Code -->
 <script>
   !function(f,b,e,v,n,t,s)
@@ -73,5 +48,35 @@
 </head>
   <body class="bg-zinc-50 text-zinc-900 overflow-x-hidden">
     <div id="root"></div>
+
+    <!-- BOTÃO WHATSAPP FIXO COM DELAY -->
+<a
+  href="#"
+  onclick="
+    fbq('track', 'Contact');
+    setTimeout(function() {
+      window.open('https://wa.me/5521979229365', '_blank');
+    }, 300);
+    return false;
+  "
+  style="
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    padding: 14px 18px;
+    border-radius: 50px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 9999;
+  "
+>
+  💬 Falar no WhatsApp
+</a>
+
 </body>
 </html>
