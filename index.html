@@ -17,7 +17,6 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '1099389135068073');
 fbq('track', 'PageView');
-  onclick="fbq('track', 'Contact');"
 </script>
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1099389135068073&ev=PageView&noscript=1"
@@ -48,36 +47,16 @@ src="https://www.facebook.com/tr?id=1099389135068073&ev=PageView&noscript=1"
 </head>
   <body class="bg-zinc-50 text-zinc-900 overflow-x-hidden">
     <div id="root"></div>
+    <script>
+document.addEventListener("click", function(e) {
+  const link = e.target.closest("a");
+  if (!link) return;
 
-<a
-  href="https://wa.me/5521979229365"
-  target="_blank"
-  onclick="
-    event.preventDefault();
+  if (link.href && link.href.includes("wa.me")) {
     fbq('track', 'Contact');
-    setTimeout(function() {
-      window.open('https://wa.me/5521979229365', '_blank');
-    }, 300);
-  "
-  style="
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #25D366;
-    color: white;
-    padding: 14px 18px;
-    border-radius: 50px;
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: none;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    z-index: 9999;
-  "
->
-💬 Falar no WhatsApp
-</a>
-
+  }
+});
+</script>
 
 
 </body>
